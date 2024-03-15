@@ -129,7 +129,7 @@ public class SomatoShiftManager : MonoBehaviour
         return "http://" + ip + ":" + port + "/" + uri_params[method] + "?value=" + value;
     }   
     private string makeUri(string method, bool value) {
-        return "http://" + ip + ":" + port + "/" + uri_params[method] + "?value=" + value;
+        return "http://" + ip + ":" + port + "/" + uri_params[method] + "?value=" + (value? "true":"false");
     }
     // HTTP GET request
     private IEnumerator GetRequest(string uri)
